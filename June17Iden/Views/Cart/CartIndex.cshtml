@@ -1,0 +1,24 @@
+﻿@model IEnumerable<June17Iden.Models.PersonItem>
+@{
+    ViewData["Title"] = "CartIndex";
+}
+
+<h1>CartIndex</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Person.Name</th>
+                <th>@item.Quantity</th>
+            </tr>
+        }
+
+    </tbody>
+</table>

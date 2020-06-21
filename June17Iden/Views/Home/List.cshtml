@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <th>@item.Name</th>
+                <th>@item.Age</th>
+                <th><a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.Id">Choose</a></th>
+            </tr>
+        }
+    </tbody>
+</table>
+<form method="post" asp-action="Logout" asp-controller="Account">
+    <input type="submit" value="Exit" class="btn btn-danger"/>
+</form>
+
