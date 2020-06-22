@@ -11,7 +11,7 @@ namespace June17Iden.Models
 {
     public class Cart
     {
-        private ICollection<PersonItem> personList = new List<PersonItem>();
+        private List<PersonItem> personList = new List<PersonItem>();
         [JsonIgnore]
         public ISession Session { get; set; }
         public static Cart GetCart(IServiceProvider service)
@@ -27,7 +27,7 @@ namespace June17Iden.Models
             PersonItem item = personList.Where(p => p.Person.Id == person.Id).FirstOrDefault();
             if(item == null)
             {
-                personList.Add(new PersonItem { Person = person, Quantity = quantity });
+                personList.Add(new PersonItem { Person = person, Quantity = quantity, Name = person.Name });
             }
             else
             {
