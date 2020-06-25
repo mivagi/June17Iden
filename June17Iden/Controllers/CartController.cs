@@ -31,5 +31,11 @@ namespace June17Iden.Controllers
 
             return RedirectToAction("CartIndex");
         }
+        //public IActionResult Remove(int id)
+        //{
+        //    var person = content.People.FirstOrDefault(p => p.Id == id);
+        //    cart.RemovePerson(person);
+        //    return RedirectToAction("CartIndex");
+        //}
     }
 }

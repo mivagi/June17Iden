@@ -9,16 +9,19 @@
         <tr>
             <th>Name</th>
             <th>Quantity</th>
+            @*<th></th>*@
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <th>@item.Person.Name</th>
-                <th>@item.Quantity</th>
+                <td>@item.Person.Name</td>
+                <td>@item.Quantity</td>
+                @*<td><a asp-action="Remove" asp-controller="Cart" asp-route-id="@item.Person.Id" class="btn btn-danger">Удалить</a></td>*@
             </tr>
         }
     </tbody>
 </table>
 <a asp-action="Order" asp-controller="Order" class="btn btn-danger">Complete order</a>
+

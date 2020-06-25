@@ -32,6 +32,7 @@ namespace June17Iden
             services.AddScoped(op => Cart.GetCart(op));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IOrder, OrderRepository>();
+            services.AddTransient<IPeople, PeopleRepository>();
             services.AddControllersWithViews();
             services.AddMemoryCache();
             services.AddSession();

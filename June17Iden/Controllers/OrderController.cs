@@ -11,10 +11,12 @@ namespace June17Iden.Controllers
     public class OrderController : Controller
     {
         private readonly IOrder _order;
+        private readonly Cart cart;
 
-        public OrderController(IOrder order)
+        public OrderController(IOrder order, Cart cart)
         {
             _order = order;
+            this.cart = cart;
         }
         public IActionResult List()
         {
@@ -36,7 +38,7 @@ namespace June17Iden.Controllers
         }
         public IActionResult Complete()
         {
-            ViewBag.Message = "All right";
+            //cart.Clear();
             return View();
         }
     }

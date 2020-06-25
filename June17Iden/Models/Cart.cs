@@ -35,6 +35,12 @@ namespace June17Iden.Models
             }
             Session.SetJson("CartId", this);
         }
+        //public virtual void Clear() => personList.Clear();
+        //public void RemovePerson(Person person)
+        //{
+        //    personList.RemoveAll(p => p.Person.Id == person.Id);
+        //}
         public virtual IEnumerable<PersonItem> GetAllPersonItems => personList;
+        
     }
 }
