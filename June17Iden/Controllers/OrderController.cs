@@ -38,7 +38,7 @@ namespace June17Iden.Controllers
         }
         public IActionResult Complete()
         {
-            //cart.Clear();
+            cart.Clear();
             return View();
         }
     }

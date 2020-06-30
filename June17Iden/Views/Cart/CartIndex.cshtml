@@ -9,7 +9,7 @@
         <tr>
             <th>Name</th>
             <th>Quantity</th>
-            @*<th></th>*@
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@
             <tr>
                 <td>@item.Person.Name</td>
                 <td>@item.Quantity</td>
-                @*<td><a asp-action="Remove" asp-controller="Cart" asp-route-id="@item.Person.Id" class="btn btn-danger">Удалить</a></td>*@
+                <td><a asp-action="Remove" asp-controller="Cart" asp-route-id="@item.Person.Id" class="btn btn-danger">Удалить</a></td>
             </tr>
         }
     </tbody>
